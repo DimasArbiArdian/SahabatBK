@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SahabatBK Login</title>
+  <link rel="stylesheet" href="..\css\login.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Kolom Kiri: Logo & Sambutan -->
+    <div class="left-column">
+      <div class="logo">
+        <img src="..\img\Logo.png" alt="SahabatBK Logo">
+      </div>
+      <h1>Hello, Sahabat BK!</h1>
+      <p class="tagline">Connect, Guide, and Grow Together with SahabatBK, Your Trusted Online Counseling Platform.</p>
+    </div>
+
+    <!-- Kolom Kanan: Form Login -->
+    <div class="right-column">
+      <h2>Welcome to SahabatBK!</h2>
+      <form id="login-form">
+        <label for="email">Email, NIP, or NIS</label>
+        <input type="text" id="email" name="email" required placeholder="Enter your email or NIP/NIS">
+        
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" required placeholder="Enter your password">
+        
+        <a href="..\html\forgot-password.html" class="forgot-password">Forgot password?</a>
+
+        <button type="submit" class="login-btn">Login</button>
+
+        <p class="register">Don’t have an account? <a href="..\html\register.html">Register</a></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('login-form').addEventListener('submit', function(event) {
+      event.preventDefault();  // Mencegah form untuk dikirim secara default
+  
+      // Ambil nilai email dan password dari form (optional untuk validasi)
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+  
+      // Lakukan validasi jika diperlukan (misalnya, cek apakah email dan password tidak kosong)
+      if (email && password) {
+        // Simulasi proses login berhasil (bisa disesuaikan dengan API atau server)
+        // Misalnya, setelah login berhasil, arahkan ke halaman beranda
+        window.location.href = "..\html\beranda.html";  // Ganti dengan URL halaman beranda Anda
+      } else {
+        alert('Please fill in both fields!');
+      }
+    });
+  </script>
+</body>
+</html>

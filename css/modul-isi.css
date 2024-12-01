@@ -1,0 +1,143 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #35b987;
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-home {
+    background-color: #35b987;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .btn-home:hover {
+    background-color: #00796b;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  
+  .user-role {
+    font-size: 14px;
+    color: #888888;
+  }
+  
+  /* Sidebar */
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #dddddd;
+  }
+  
+  .menu-item {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #888888;
+    cursor: pointer;
+  }
+  
+  .menu-item.active {
+    background-color: #35b987;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    width: 80%;
+    padding: 40px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    color: #35b987;
+    margin-bottom: 10px;
+  }
+  
+  .page-description {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 30px;
+  }
+  
+  .content-section {
+    margin-bottom: 30px;
+  }
+  
+  .content-section h2 {
+    font-size: 20px;
+    color: #333333;
+    margin-bottom: 10px;
+  }
+  
+  .content-section ul,
+  .content-section ol {
+    margin-left: 20px;
+    margin-bottom: 20px;
+  }
+  
+  blockquote {
+    font-style: italic;
+    color: #888888;
+    margin-top: 20px;
+  }
+  

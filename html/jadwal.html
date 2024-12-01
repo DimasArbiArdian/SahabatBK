@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jadwal Konseling - SahabatBK</title>
+  <link rel="stylesheet" href="..\css\jadwal.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">SahabatBK</div>
+    <div class="navigation">
+      <button class="btn-home">Beranda</button>
+      <div class="user-info">
+        <img src="..\img\profile.jpg" alt="Profile" class="profile-pic">
+        <div class="user-details">
+          <span class="user-name">Nama Pengguna</span>
+          <span class="user-role">Siswa</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar dan Konten -->
+  <div class="container">
+    <aside class="sidebar">
+      <div class="menu-item">Modul bimbingan</div>
+      <div class="menu-item active">Jadwal konseling</div>
+    </aside>
+    <main class="main-content">
+      <h1 class="page-title">Jadwal Konseling</h1>
+      <p class="page-description">
+        Lihat jadwal konseling yang telah Anda ajukan dan terkonfirmasi untuk dilaksanakan.
+        Anda dapat memantau status permintaan konseling dan mengakses informasi jadwal yang sudah disetujui.
+      </p>
+      <button class="btn-new-schedule">Ajukan jadwal baru</button>
+
+      <!-- Tabel Jadwal -->
+      <section class="schedule-section">
+        <h2>Jadwal konseling anda</h2>
+        <table class="schedule-table">
+          <thead>
+            <tr>
+              <th>Tanggal dan waktu</th>
+              <th>Guru BK</th>
+              <th>Topik</th>
+              <th>Status</th>
+              <th>Aksi</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>17 Desember 2024, 08:00</td>
+              <td>Dianne Russell</td>
+              <td>Masalah Akademik</td>
+              <td><span class="status rejected">Ditolak</span></td>
+              <td><a href="#" class="action-link">Ajukan ulang</a></td>
+            </tr>
+            <tr>
+              <td>17 Desember 2024, 10:00</td>
+              <td>Dianne Russell</td>
+              <td>Masalah Pribadi</td>
+              <td><span class="status completed">Selesai</span></td>
+              <td>-</td>
+            </tr>
+            <tr>
+              <td>18 Desember 2024, 11:00</td>
+              <td>Dianne Russell</td>
+              <td>Masalah Ekonomi</td>
+              <td><span class="status approved">Disetujui</span></td>
+              <td><a href="#" class="action-link">Mulai Konseling</a></td>
+            </tr>
+            <tr>
+              <td>20 Desember 2024, 15:00</td>
+              <td>Dianne Russell</td>
+              <td>Masalah Pribadi</td>
+              <td><span class="status pending">Menunggu</span></td>
+              <td>-</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

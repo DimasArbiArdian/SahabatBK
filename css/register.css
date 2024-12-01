@@ -1,0 +1,117 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffffff, #80cbc4);
+}
+
+.register-container {
+    width: 400px;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-header {
+    margin-bottom: 20px;
+}
+
+.form-header .back-button {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #00796b;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.form-header h2 {
+    font-size: 1.8rem;
+    color: #00796b;
+}
+
+.form-header p {
+    font-size: 1rem;
+    color: #555;
+    margin-top: 5px;
+}
+
+.role-selection {
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.role-button {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #00796b;
+    border-radius: 5px;
+    background: white;
+    color: #00796b;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+.role-button.active {
+    background: #00796b;
+    color: white;
+    text-decoration: none;
+}
+
+.role-button:hover {
+    background: #004d40;
+    color: white;
+}
+
+.register-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.register-form input:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.register-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.register-button:hover {
+    background-color: #004d40;
+}
+
+.login-prompt {
+    font-size: 0.9rem;
+    margin-top: 10px;
+    color: #555;
+}
+
+.login-link {
+    color: #00796b;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}

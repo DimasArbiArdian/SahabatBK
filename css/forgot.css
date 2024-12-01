@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background: linear-gradient(to right, #ffffff, #80cbc4);
+}
+
+.forgot-password-container {
+    width: 400px;
+    background: #fff;
+    padding: 20px 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.form-header {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+.form-header .back-button {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #00796b;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+.form-header h2 {
+    font-size: 1.8rem;
+    color: #00796b;
+    margin-bottom: 5px;
+}
+
+.form-header p {
+    font-size: 1rem;
+    color: #555;
+}
+
+.forgot-password-form input {
+    width: 100%;
+    margin-bottom: 15px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.forgot-password-form input:focus {
+    border-color: #00796b;
+    outline: none;
+}
+
+.continue-button {
+    width: 100%;
+    padding: 10px;
+    font-size: 1rem;
+    color: white;
+    background-color: #00796b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.continue-button:hover {
+    background-color: #004d40;
+}
+
+@media (max-width: 480px) {
+    .forgot-password-container {
+        padding: 15px;
+    }
+
+    .form-header h2 {
+        font-size: 1.5rem;
+    }
+
+    .form-header p {
+        font-size: 0.9rem;
+    }
+
+    .forgot-password-form input,
+    .continue-button {
+        font-size: 0.9rem;
+    }
+}

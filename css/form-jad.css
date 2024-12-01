@@ -1,0 +1,158 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #35b987;
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-home {
+    background-color: #35b987;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .btn-home:hover {
+    background-color: #00796b;
+  }
+
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  
+  .user-role {
+    font-size: 14px;
+    color: #888888;
+  }
+  
+  /* Sidebar */
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #dddddd;
+  }
+  
+  .menu-item {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #888888;
+    cursor: pointer;
+  }
+  
+  .menu-item.active {
+    background-color: #35b987;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    width: 80%;
+    padding: 40px;
+  }
+  
+  .back-link {
+    display: block;
+    color: #35b987;
+    text-decoration: none;
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+  
+  .form-container {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  .form-input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    font-size: 16px;
+  }
+  
+  .form-input:focus {
+    border-color: #35b987;
+    outline: none;
+  }
+  
+  .btn-submit {
+    width: 100%;
+    padding: 10px;
+    background-color: #35b987;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  .btn-submit:hover {
+    background-color: #2e9e75;
+  }
+  

@@ -1,0 +1,164 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Body */
+  body {
+    background-color: #ffffff;
+    color: #333333;
+    line-height: 1.6;
+  }
+  
+  /* Header */
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    border-bottom: 1px solid #dddddd;
+  }
+  
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #35b987;
+  }
+  
+  .navigation {
+    display: flex;
+    align-items: center;
+  }
+  
+  .btn-home {
+    background-color: #35b987;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-right: 20px;
+  }
+  
+  .btn-home:hover {
+    background-color: #00796b;
+  }
+  
+  .user-info {
+    display: flex;
+    align-items: center;
+  }
+  
+  .profile-pic {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+  
+  .user-details {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .user-name {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 2px;
+  }
+  
+  .user-role {
+    font-size: 14px;
+    color: #888888;
+  }
+  
+  /* Sidebar */
+  .container {
+    display: flex;
+  }
+  
+  .sidebar {
+    width: 20%;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-right: 1px solid #dddddd;
+  }
+  
+  .menu-item {
+    padding: 10px 20px;
+    margin-bottom: 10px;
+    color: #888888;
+    cursor: pointer;
+  }
+  
+  .menu-item.active {
+    background-color: #35b987;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+  
+  /* Main Content */
+  .main-content {
+    width: 80%;
+    padding: 40px;
+  }
+  
+  .page-title {
+    font-size: 24px;
+    color: #35b987;
+    margin-bottom: 10px;
+  }
+  
+  .page-description {
+    font-size: 16px;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  
+  .modules-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+  }
+  
+  .module-card {
+    border: 1px solid #dddddd;
+    border-radius: 5px;
+    padding: 20px;
+    text-align: center;
+    background-color: #ffffff;
+    transition: box-shadow 0.3s ease;
+  }
+  
+  .module-card:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .module-card h2 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+  
+  .module-card p {
+    font-size: 14px;
+    color: #666666;
+    margin-bottom: 20px;
+  }
+  
+  .btn-module {
+    background-color: #35b987;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    cursor: pointer;
+  }
+  
+  .btn-module:hover {
+    background-color: #2e9e75;
+  }
+  

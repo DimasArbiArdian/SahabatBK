@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Form Pengajuan Jadwal Konseling</title>
+  <link rel="stylesheet" href="..\css\form-jad.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header">
+    <div class="logo">SahabatBK</div>
+    <div class="navigation">
+      <button class="btn-home">Beranda</button>
+      <div class="user-info">
+        <img src="..\img\profile.jpg" alt="Profile" class="profile-pic">
+        <div class="user-details">
+          <span class="user-name">Nama Pengguna</span>
+          <span class="user-role">Siswa</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- Sidebar dan Konten -->
+  <div class="container">
+    <aside class="sidebar">
+      <div class="menu-item">Modul bimbingan</div>
+      <div class="menu-item active">Jadwal konseling</div>
+    </aside>
+    <main class="main-content">
+      <a href="#" class="back-link">← Form pengajuan jadwal konseling</a>
+      <div class="form-container">
+        <form>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Tanggal dan waktu yang diinginkan"
+              required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-input"
+              placeholder="Topik konseling"
+              required
+            />
+          </div>
+          <button type="submit" class="btn-submit">Ajukan jadwal</button>
+        </form>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
