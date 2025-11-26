@@ -1,0 +1,123 @@
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  id               String   @id @default(uuid())
+  email            String   @unique
+  fullname         String
+  password         String
+  role             Role
+  verificationCode String?
+  resetToken       String?
+  verified         Boolean  @default(false)
+  createdAt        DateTime @default(now())
+  updatedAt        DateTime @updatedAt
+
+  // Relations (Only one of them will be filled depending on the role)
+  teacher Teacher?
+  student Student?
+}
+
+model Teacher {
+  id          String @id @default(uuid())
+  employeeId  String @unique // Employee ID (NIP)
+  user        User   @relation(fields: [userId], references: [id])
+  userId      String @unique
+  phoneNumber String
+
+  // Relation with School
+  schoolId String?
+  school   School? @relation(fields: [schoolId], references: [id])
+
+  modules  Module[]
+  Schedule Schedule[]
+}
+
+model Student {
+  id          String @id @default(uuid())
+  studentId   String @unique // Student ID (NIS)
+  grade       String // Example: "10 Science 2"
+  user        User   @relation(fields: [userId], references: [id])
+  userId      String @unique
+  phoneNumber String
+
+  // Relation with School
+  schoolId String
+  school   School     @relation(fields: [schoolId], references: [id])
+  Schedule Schedule[]
+}
+
+model School {
+  id        String   @id @default(uuid())
+  name      String   @unique
+  address   String
+  createdAt DateTime @default(now())
+
+  // Relations
+  teachers Teacher[]
+  students Student[]
+  Module   Module[]
+}
+
+model Module {
+  id          String   @id @default(uuid())
+  title       String
+  description String
+  content     String
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  teacherId String
+  teacher   Teacher @relation(fields: [teacherId], references: [id])
+
+  schoolId String
+  school   School @relation(fields: [schoolId], references: [id])
+
+  references ModuleReference[]
+}
+
+model ModuleReference {
+  id       String @id @default(uuid())
+  url      String
+  moduleId String
+  module   Module @relation(fields: [moduleId], references: [id])
+}
+
+enum Role {
+  TEACHER
+  STUDENT
+  ADMIN
+}
+
+model Schedule {
+  id        String  @id @default(uuid())
+  studentId String
+  student   Student @relation(fields: [studentId], references: [id])
+
+  counselorId String?
+  counselor   Teacher? @relation(fields: [counselorId], references: [id])
+
+  title          String
+  description    String
+  rejectedReason String?
+  date           DateTime
+  status         ScheduleStatus @default(PENDING) // Status permintaan meeting
+  createdAt      DateTime       @default(now())
+  updatedAt      DateTime       @updatedAt
+
+  // Optional: Jika counselor menerima meeting, bisa diisi tanggal konfirmasi
+  confirmedAt DateTime?
+}
+
+enum ScheduleStatus {
+  PENDING // Belum dikonfirmasi oleh counselor
+  APPROVED // Disetujui oleh counselor
+  REJECTED // Ditolak oleh counselor
+  CANCELED // Dibatalkan oleh student
+}
